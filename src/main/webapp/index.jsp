@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post">
+	<form method="post" action="PrimeiroServlet" >
 		<div class="container col-4 mt-4 mb-4">
 			<h1>Calculadora</h1>
 			<p>Digite dois valores a serem calculados: </p>

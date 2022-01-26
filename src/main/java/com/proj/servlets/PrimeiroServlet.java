@@ -35,7 +35,13 @@ public class PrimeiroServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response)
+		int val1, val2, result;
+		val1 = Integer.parseInt(request.getParameter("val1"));
+		val2 = Integer.parseInt(request.getParameter("val2"));
+		result = val1 + val2;
+	
+		response.getWriter().println("Resultado = " + result);
 	}
 
 }
