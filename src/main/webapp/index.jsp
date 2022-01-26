@@ -10,16 +10,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	<form method="post">
 		<div class="container col-4 mt-4 mb-4">
 			<h1>Calculadora</h1>
 			<p>Digite dois valores a serem calculados: </p>
 			<div class="row">
   				<div class="col">
-    				<input type="text" class="form-control" placeholder="Valor 1" aria-label="Valor 1">
+    				<input type="text" class="form-control" placeholder="Valor 1" aria-label="Valor 1" name="val1" >
   				</div>
   				<div class="col">
-    				<input type="text" class="form-control" placeholder="Valor 2" aria-label="Valor 2">
+    				<input type="text" class="form-control" placeholder="Valor 2" aria-label="Valor 2" name="val2" >
   				</div>
 			</div>
 			<div class="container row row-cols-lg-auto g-3 align-items-center mt-2 mb-2 buttons">
@@ -31,6 +31,8 @@
   				</div>
   			</div>
 		</div>
+	</form>
+		
 
 </body>
 </html>
