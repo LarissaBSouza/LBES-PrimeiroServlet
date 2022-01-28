@@ -41,7 +41,8 @@ public class PrimeiroServlet extends HttpServlet {
 		val2 = Integer.parseInt(request.getParameter("val2"));
 		result = val1 + val2;
 	
-		response.getWriter().println("Resultado = " + result);
+		request.setAttribute("res", result); //requestScope-forward
+		request.getRequestDispatcher("/").forward(request, response); //Rediciona para ele mesmo)
 	}
 
 }

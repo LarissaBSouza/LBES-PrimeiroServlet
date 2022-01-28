@@ -32,7 +32,8 @@
   			</div>
 		</div>
 	</form>
-		
+	
+	<p> Resultado = ${requestScope.res}	</p>	
 
 </body>
 </html>
