@@ -36,12 +36,18 @@ public class PrimeiroServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response)
-		int val1, val2, result;
-		val1 = Integer.parseInt(request.getParameter("val1"));
-		val2 = Integer.parseInt(request.getParameter("val2"));
-		result = val1 + val2;
+
+		if ((request.getParameter("val1") != null) && (request.getParameter("val2") != null)) {
+			
+			int val1 = Integer.parseInt(request.getParameter("val1"));
+			int val2 = Integer.parseInt(request.getParameter("val2"));
+		
+			Calculadora c = new Calculadora(val1, val2);
+			int resultado = c.somar();
 	
-		request.setAttribute("res", result); //requestScope-forward
+			request.setAttribute("res", resultado); //requestScope-forward
+		}
+		
 		request.getRequestDispatcher("/").forward(request, response); //Rediciona para ele mesmo)
 	}
 
