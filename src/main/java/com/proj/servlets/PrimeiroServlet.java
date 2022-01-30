@@ -41,11 +41,27 @@ public class PrimeiroServlet extends HttpServlet {
 			
 			int val1 = Integer.parseInt(request.getParameter("val1"));
 			int val2 = Integer.parseInt(request.getParameter("val2"));
+			String operacoes = request.getParameter("operacoes");
 		
 			Calculadora c = new Calculadora(val1, val2);
-			int resultado = c.somar();
+			if (operacoes.equals("subtracao")) {
+				int resultado = c.subtrair();
+				request.setAttribute("res", resultado); //requestScope-forward
+				
+			} else if (operacoes.equals("soma")) {
+				int resultado = c.somar();
+				request.setAttribute("res", resultado); //requestScope-forward
+				
+			} else if (operacoes.equals("divisao")) {
+				double resultado = c.dividir();
+				request.setAttribute("res", resultado); //requestScope-forward
+				
+			} else if (operacoes.equals("multiplicacao")) {
+				int resultado = c.multiplicar();
+				request.setAttribute("res", resultado); //requestScope-forward
+			}
 	
-			request.setAttribute("res", resultado); //requestScope-forward
+//			request.setAttribute("res", resultado); //requestScope-forward
 		}
 		
 		request.getRequestDispatcher("/").forward(request, response); //Rediciona para ele mesmo)

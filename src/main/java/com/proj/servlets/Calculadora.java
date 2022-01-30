@@ -17,8 +17,8 @@ public class Calculadora {
 		return this.valor1 - this.valor2;
 	}
 	
-	public int dividir() {
-		return this.valor1 / this.valor2;
+	public double dividir() {
+		return (double) this.valor1 / this.valor2;
 	}
 	
 	public int multiplicar() {

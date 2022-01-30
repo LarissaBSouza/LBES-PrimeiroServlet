@@ -16,19 +16,19 @@
 			<p>Digite dois valores a serem calculados: </p>
 			<div class="row">
   				<div class="col">
-    				<input type="text" class="form-control" placeholder="Valor 1" aria-label="Valor 1" name="val1" >
+    				<input type="number" class="form-control" placeholder="Valor 1" aria-label="Valor 1" name="val1" >
   				</div>
   				<div class="col">
-    				<input type="text" class="form-control" placeholder="Valor 2" aria-label="Valor 2" name="val2" >
+    				<input type="number" class="form-control" placeholder="Valor 2" aria-label="Valor 2" name="val2" >
   				</div>
 			</div>
 			<div class="container row row-cols-lg-auto g-3 align-items-center mt-2 mb-2 buttons">
-  				<select class="form-select" aria-label="Disabled select example" name="select">
-  					<option value="Nulo">Selecione o tipo de operação</option>
-  					<option value="Soma">Somar</option>
-  					<option value="Subtração">Subtrair</option>
-  					<option value="Divisão">Dividir</option>
-  					<option value="Multiplicação">Multiplicar</option>
+  				<select class="form-select" aria-label="Disabled select example" name="operacoes">
+  					<option value="vazio">Selecione o tipo de operação</option>
+  					<option value="soma">Somar</option>
+  					<option value="subtracao">Subtrair</option>
+  					<option value="divisao">Dividir</option>
+  					<option value="multiplicacao">Multiplicar</option>
 				</select>
 				<div class="col">
     				<button type="reset" class="btn btn-warning">Limpar</button>
@@ -37,10 +37,13 @@
     				<button type="submit" class="btn btn-warning">Calcular</button>
   				</div>
   			</div>
+  			<div class="container">
+  				<p> Resultado = ${requestScope.res}	</p>
+  			</div>
 		</div>
 	</form>
 	
-	<p> Resultado = ${requestScope.res}	</p>	
+		
 
 </body>
 </html>
